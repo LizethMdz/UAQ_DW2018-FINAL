@@ -17,7 +17,7 @@
           </li>
 
           <li>
-            <a href=""><i class="izq fas fa-level-down-alt"></i>Registrar</a>
+            <a href="registro.php"><i class="izq fas fa-level-down-alt"></i>Registrar</a>
           </li>
 
           <li>

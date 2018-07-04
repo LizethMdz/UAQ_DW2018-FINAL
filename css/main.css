@@ -44,8 +44,7 @@
 		background: #EFEFEF;
 		border:none;
 		outline: none;
-		border-bottom: 3px solid yellow;
-    /*border-bottom: 3px solid #1F618D;*/
+    border-bottom: 3px solid #1F618D;
 	}
 
 
@@ -92,7 +91,6 @@
 
 #logo
 {
-	font-family:'Roboto Condensed', sans-serif;
 	width: 100%;
   /*height: 90%;*/
 	height: 100%;
@@ -100,8 +98,12 @@
 	font-size: 5em;
 	background-color: rgba(255,255,255,0.1);
 	float: left;
-  /* font-weight: bold;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  
+  /* 
   font-family: 'Wendy One', sans-serif;
+  font-family:'Roboto Condensed', sans-serif;
   background-color: rgba(255,255,255,0.01);
   padding-top: 3%;*/
 }
@@ -187,16 +189,26 @@
 	}
 /* REGISTRO */
 
+.formulario{
+  background-color: rgba(36, 113, 163,0.1);
+  width: 70%;
+  height: 80%;
+  margin-left: 15%;
+  margin-top: 2%;
+  float: left;
+  border-radius: 30px 30px 30px 30px;
+}
+
 .re1{
   width: 50%;
-  height: 60%;
-  float: right;
+  height: 30%;
+  float: left;
   background-color: rgba(255,255,255,0.01);
 }
 
 .re2{
   width: 50%;
-  height: 60%;
+  height: 30%;
   float: right;
   background-color: rgba(255,255,255,0.01);
 }
@@ -214,10 +226,10 @@
     width: 50%;
     height: 30px;
     border-radius: 25px 25px 25px 25px;
-    background-color: rgb(115, 198, 182);
+    background-color: rgb(31, 97, 141);
     border-style: none;
     border-color: #46D8C4;
-    color: #0E6655;
+    color: white;
     text-align: center;
     outline: none;
   }
@@ -228,7 +240,7 @@
   width: 20%;
   height: 30px;
   margin-left: 40%;
-  margin-top: 6%;
+  margin-top: 5%;
   background-color: #F8C471;
   border-radius: 25px 25px 25px 25px;
   
@@ -253,10 +265,9 @@
     border: 1px solid rgba(0,0,0,.1);
     box-shadow: inset 0px 10px 5px -5px #DC7633, 
                       0px  4px 5px -3px rgba(0,0,0,.1) ;
-    color: rgba(212, 172, 13,1);
+    color: rgba(120, 40, 31,1);
   }
   .registros{
-    background: yellow;
     width: 80%;
     height: 70%;
     padding: 10px 10px 10px 10px;  
@@ -271,6 +282,7 @@
   float: left;
   background-color: rgba(255,255,255,0.01);
 }
+
 
 /*Contenedor de los distintos contenidos por vista*/
 .contenido-all{

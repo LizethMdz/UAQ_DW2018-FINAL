@@ -4,15 +4,18 @@
 			
 				<div class = "descripcion">
 
-						<div class="ingreso">
-							<p> Correo o Usuario </p>
-							<input type =  "text">
-							<p> Contraseña</p>
-							<input type =  "password">
-						</div>
-						<div id = "envio">
-							<input type="submit" name="registro" value="Inicio Sesión">
-						</div>
+
+						<div class="formulario">
+								<form method="POST">
+									<p> Correo o Usuario </p>
+									<input type =  "text">
+									<p> Contraseña</p>
+									<input type =  "password">
+								</form>
+								<div id = "envio">
+									<input type="submit" name="registro" value="Inicio Sesión">
+								</div>
+						</div><!--formulario-->
 
 				</div><!--descripcion-->
 <?php include_once('footer.php'); ?>
