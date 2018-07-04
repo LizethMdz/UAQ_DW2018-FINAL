@@ -11,6 +11,7 @@
 					 <div class="contenido-all">
 
 									<div class ="re2">
+										<h3>Contacto</h3>
 										<p> Celular</p>
 										<input type =  "text">
 										<p> Email </p>
@@ -19,7 +20,7 @@
 										<input type =  "password">
 										<p> Calle y número</p>
 										<input type =  "text">
-										<p> Estado</p>
+										<p> Municipio</p>
 										<select >
 											<option>Querétaro</option>
 											<option>Guanajuato</option>
@@ -29,6 +30,7 @@
 									</div>
 
 									<div class="re1">
+										<h3>Datos Generales</h3>
 										<p> Nombre(s) </p>
 										<input type =  "text">
 										<p> Apellido Paterno</p>
@@ -44,7 +46,7 @@
 									<div id = "envio">
 										<input type="submit" name="registro" value="Registrarme!">
 									</div>
-								
+
 							</div>
 				</div><!--descripcion-->
 <?php include_once('footer.php'); ?>

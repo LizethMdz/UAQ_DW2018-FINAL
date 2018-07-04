@@ -185,7 +185,7 @@
   	}
 
   	.re1 input[type="text"], .re2 input[type="text"], .re2 input[type="password"],
-    .ingreso input[type="text"], .ingreso input[type="password"],
+    .ingreso input[type="email"], .ingreso input[type="password"],
     .re1 input[type="date"], .re2 input[type="number"],
   	.re2 input[type="email"], .re2 select{
   		width: 50%;
@@ -194,7 +194,7 @@
   		background-color: rgb(115, 198, 182);
   		border-style: none;
   		border-color: #46D8C4;
-  		color: #0E6655;
+  		color: white;
   		text-align: center;
   		outline: none;
   	}

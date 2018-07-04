@@ -10,16 +10,19 @@
 					</div>
 					 <div class="contenido-all">
 
+						 <form class="" action="login.php" method="post">
+
 
 										<div class="ingreso">
 											<p> Correo o Usuario </p>
-											<input type =  "text">
+											<input type =  "email" name="email" maxlength="30" required placeholder="correo@dominio.com">
 											<p> Contraseña</p>
-											<input type =  "password">
+											<input type =  "password" name="password" maxlength="10" required>
 										</div>
 										<div id = "envio">
-											<input type="submit" name="registro" value="Inicio Sesión">
+											<input type="submit" name="guardar" value="Inicio Sesión">
 										</div>
+						  </form>
 
 					</div>
 				</div><!--descripcion-->
