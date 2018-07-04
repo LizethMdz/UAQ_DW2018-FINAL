@@ -9,6 +9,9 @@
 
   if(!$dbcon){
     die('error al conectar en la base de datos');
+  }else{
+    //solo para prueba despues se quita
+    echo "Conectado";
   }
 
 
