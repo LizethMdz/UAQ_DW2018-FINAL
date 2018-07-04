@@ -12,7 +12,7 @@
 
                             <div class="espacio_contenido">
                                 <h3 class="titulos">CONVOCATORIAS CREADAS</h3>
-                                <div class="tabla-contenedor">
+                                <div class="tabla-contenedor-2">
                                         <table class="tabla-general">
                                         <tr>
                                           <th style="background:#006BAA; color:white;">Nombre</th>

@@ -7,28 +7,29 @@
 <div class = "descripcion">
           <div id="des">
 	   <h2>Asignar Sedes</h2>
-	  
+
           </div>
 	<div class="contenido-all">
-                    <div class="espacio_contenido">
+          <div class="espacio_contenido">
 
           		<h3 class="titulos">REGISTRO</h3>
-
-          		<p class="parr-title">Nombre:</p>
+                              <br>
+          		<label for="" class="parr-title">Nombre:</label>
           		<input type="text"  class="inputs-profe">
-
-          		<p class="parr-title">Institucion</p>
+                              <br><br>
+          		<label for="" class="parr-title">Institucion</label>
           		<select name="municipio" id="muni" class="selects">
           			<option value="">UAQ</option>
           		</select>
-          		<p class="parr-title">Institucion:</p>
+                              <br><br>
+          		<label for="" class="parr-title">Institucion:</label>
           		<input type="number" class="inputs-profe">
-
-          		<p class="parr-title">Municipio</p>
+                              <br><br>
+          		<label for="" class="parr-title">Municipio</label>
           		<select name="municipio" id="muni" class="selects">
           			<option value="">Queretaro</option>
           		</select>
-
+                              <br><br>
           		<input type="submit" value="Guardar" class="btn-enviar-form">
 
           	</div>

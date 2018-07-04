@@ -256,7 +256,7 @@
 	border: 1px solid #E1E1E1;
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height:500px;;
 	background: white;
 
 }
@@ -382,6 +382,7 @@ div.espacio_contenido{
   margin-top:30px;
   background: white;
   border:1px solid #dadada;
+  box-shadow: 0px 2px 7px -2px rgba(0,0,0,.5);
   /*box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 
 }
@@ -419,9 +420,12 @@ div.espacio_contenido{
   background: #28A745;
   color:white;
   padding: 10px;
-  margin-left: 200px;
+  width: 120px;
+  margin-left: 100px;
   margin-top: 5px;
   border:none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 7px -2px rgba(0,0,0,.5);
   cursor: pointer;
 }
 
@@ -447,3 +451,142 @@ span{
   background: blue;
   color:white;
 }
+
+
+.tabla-convocatoria
+{
+
+  border:1px solid #dadada;
+
+}
+
+.tabla-convocatoria table{
+  width: 100%;
+}
+
+.tabla-convocatoria th
+{
+  text-align: center;
+  background-color: #006BAA;
+  color: white;
+}
+
+.tabla-convocatoria td
+{
+  text-align: center;
+}
+
+.myButton {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+  background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+  background-color:#ffffff;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:#666666;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+  background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+  background-color:#f6f6f6;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+.contenedor
+{
+  margin-right: 60px;
+  margin-left: 60px;
+  background: white;
+  width: 85%;
+  height: 55%;
+  background: white;
+  box-shadow: 0px 2px 7px -2px rgba(0,0,0,.5);
+  margin-top: 10px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.Titulo
+{
+  margin-top: 0px;
+  background-color: #055584;
+  color: white;
+  height: 20%;
+}
+
+.Titulo h3
+{
+  color: white;
+}
+
+.Datos-alumno
+{
+    margin-top: 15px;
+    text-align: left;
+    margin-left: 50px;
+
+}
+
+.Datos-alumno label
+{
+
+  color: blue;
+  font-size: 18px;
+}
+
+.Datos-alumno input[type="text"], input[type="date"], .Datos-alumno select
+      {
+        margin-top: 3px;
+        margin-right: 0px 15px;
+        margin-left: 20px;
+        border:1px solid #dadada;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-size: 15px;
+          padding: 3px;
+          padding-top: 0px 15px;
+          text-align: left;
+          width: 20%;
+          height:20%;
+
+      }
+
+.Datos-alumno input[type = "button"]
+      {
+        background-color: #28A745;
+        border-radius: 5px;
+        box-shadow: 0px 2px 7px -2px rgba(0,0,0,.5);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+
+
+      }

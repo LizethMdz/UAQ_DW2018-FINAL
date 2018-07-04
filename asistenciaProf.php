@@ -28,8 +28,8 @@
 				<td> </td>
 				<td> </td>
 				<td> </td>
-				<td> <a href="#" class="myButton"> ✎ </a> </td>
-				<td> <a href="#" class="myButton"> ✔ </a> </td>
+				<td> <a href="registroAsistenciaProf.php" class="myButton"> ✎ </a> </td>
+				<td> <a href="registroCalificacionProf.php" class="myButton"> ✔ </a> </td>
 			</tr>
 			</tbody>
 			</table>
