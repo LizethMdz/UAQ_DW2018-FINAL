@@ -20,7 +20,7 @@
   } else {
 ?>
 
-<?php 
+<?php
 require('connectmysql.php');
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -30,15 +30,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $errores="Te faltan datos por llenar";
   }
   else{
-   $cal = trim($_POST['calif']); 
-   $id = trim($_POST['id']); 
-   $c = trim($_POST['curso']); 
+   $cal = trim($_POST['calif']);
+   $id = trim($_POST['id']);
+   $c = trim($_POST['curso']);
    $c = mysqli_real_escape_string($dbcon, $c);
   }
 
   if (empty($errores)) {
-  $query="INSERT INTO RL_INSCRIPCION (alumno,rl_curso, calificacion_alumno) 
-    VALUES ('$id','$c','$cal') 
+  $query="INSERT INTO RL_INSCRIPCION (alumno,rl_curso, calificacion_alumno)
+    VALUES ('$id','$c','$cal')
     ON DUPLICATE KEY UPDATE alumno='$id' , rl_curso='$c' , calificacion_alumno='$cal';";
   $resultado=@mysqli_query($dbcon,$query);
   if($resultado){
@@ -61,26 +61,35 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	   <!--<input type="text" name="des" value="Inscribite a nuestras convocatorias">-->
           </div>
 	<div class="contenido-all">
-		<div class ="contenedor">
+    <div class ="espacio_contenido">
 
-		<div class="Titulo">
-			<h3> Registrar asistencia </h3>
-		</div>
+    	<form method="POST" action="registroCalificacionProf.php">
+
+		<h3 class="titulos"> REGISTRAR CALIFICACION </h3>
 
 		<div class = "Datos-alumno">
 
-			<label> Nombre alumno </label>
-			<input type = "text"> <br> <br>
+				 <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>" >
 
-			<label> Calificacion </label>
-			<input type = "number"> <br> <br>
+          		<p class="parr-title"> Nombre alumno: </p>
+          		<input type="text" class="inputs-profe" name="alumno" disabled id="alumno" value="<?php if(isset($_GET['p'])) echo $_GET['p'];?>">
+              <br><br>
 
-        	<input type = "button" name= "BotonG" value = "Aceptar">
 
+        		<p class="parr-title"> Calificacion:</p>
+          		<input type="number"  class="inputs-profe" name="calif">
+              <br><br>
+              <input type="hidden" name="curso" id="curso" value="<?php echo $_GET['c'];?>">
+
+
+        	<input type="submit" value="Guardar" class="btn-enviar-form" name="guardar">
 
         </div>
+        </form>
 		</div>
-    </div>
+  </div>
 </div>
-
+<?php
+}
+?>
 <?php include_once('footer.php'); ?>

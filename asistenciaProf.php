@@ -18,25 +18,8 @@
   if(!isset($_SESSION["user"])) {
   header("location:login.php");
   } else {
+    $correo_instructor=$_SESSION['user'];
 ?>
-<?php
-            include('connectmysql.php');
-            $sqldata= mysqli_query($dbcon,"SELECT rl_inscripcion.alumno, alumno.nombre_alumno, rl_inscripcion.rl_curso, rl_curso.instructor, instructor.email_instructor FROM alumno, rl_inscripcion, rl_curso, instructor WHERE rl_inscripcion.alumno=alumno.id_alumno AND rl_inscripcion.rl_curso=rl_curso.id_curso AND rl_curso.instructor=instructor.id_instructor AND instructor.email_instructor = (SELECT usuario.email_usuario FROM usuario, instructor WHERE usuario.email_usuario=instructor.email_instructor AND usuario.email_usuario='$correo_instructor')");
-
-            while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC)){
-              echo "<tr><td>";
-              echo $row['rl_curso'];
-              echo "</td><td>";
-              echo $row['alumno'];
-              echo "</td><td>";
-              echo $row['nombre_alumno'];
-              echo "</td>";
-              echo "<td><a href='regasist.php?id=$row[alumno]&p=$row[nombre_alumno]&c=$row[rl_curso]'><img src='comun/img/act2.png' class='img-rounded'></td>";
-              echo "<td><a href='regcal.php?id=$row[alumno]&p=$row[nombre_alumno]&c=$row[rl_curso]'><img src='comun/img/act2.png' class='img-rounded'/></a></td>";
-              echo "<tr>";
-            }
-          ?>
-          
 
 
 <!--<?php include_once('header.php'); ?> <?php include_once('profesor.php'); ?>-->
@@ -61,13 +44,24 @@
 			</tr>
 			</thead>
 			<tbody>
-			<tr>
-				<td> </td>
-				<td> </td>
-				<td> </td>
-				<td> <a href="registroAsistenciaProf.php" class="myButton"> ✎ </a> </td>
-				<td> <a href="registroCalificacionProf.php" class="myButton"> ✔ </a> </td>
-			</tr>
+        <?php
+                    include('connectmysql.php');
+                    $sqldata= mysqli_query($dbcon,"SELECT rl_inscripcion.alumno, alumno.nombre_alumno, rl_inscripcion.rl_curso, rl_curso.instructor, instructor.email_instructor FROM alumno, rl_inscripcion, rl_curso, instructor WHERE rl_inscripcion.alumno=alumno.id_alumno AND rl_inscripcion.rl_curso=rl_curso.id_curso AND rl_curso.instructor=instructor.id_instructor AND instructor.email_instructor = (SELECT usuario.email_usuario FROM usuario, instructor WHERE usuario.email_usuario=instructor.email_instructor AND usuario.email_usuario='$correo_instructor')");
+
+                    while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC)){
+                      echo "<tr><td>";
+                      echo $row['rl_curso'];
+                      echo "</td><td>";
+                      echo $row['alumno'];
+                      echo "</td><td>";
+                      echo $row['nombre_alumno'];
+                      echo "</td>";
+                      echo "<td><a href='registroAsistenciaProf.php?id=$row[alumno]&p=$row[nombre_alumno]&c=$row[rl_curso]' class='myButton'>✎ </a></td>";
+                      echo "<td><a href='registroCalificacionProf.php?id=$row[alumno]&p=$row[nombre_alumno]&c=$row[rl_curso]' class='myButton'>✔</a></td>";
+                      echo "<tr>";
+                    }
+                  ?>
+
 			</tbody>
 			</table>
 
@@ -76,5 +70,7 @@
 
     </div>
 </div>
-
+<?php
+}
+?>
 <?php include_once('footer.php'); ?>

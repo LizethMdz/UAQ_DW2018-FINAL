@@ -1,6 +1,20 @@
-<?php include_once('header.php'); ?>
-
-<?php include_once('menu_principal.php'); ?>
+<?php
+    $page_title = 'Educacion para todos';
+    include ('header.php');
+ session_start();
+  if (@$_SESSION['id'] == 'Coordinador'){
+    include("coordinador.php");
+  }
+  elseif (@$_SESSION['id']=='Instructor'){
+    include("profesor.php");
+  }
+  elseif (@$_SESSION['id']=='Alumno'){
+    include("alumno.php");
+  }
+  elseif (@!$_SESSION['id']) {
+    include("menu_principal.php");
+  }
+?>
 
 				<div class = "descripcion">
 					<div id="des">
@@ -16,7 +30,6 @@
 				</div>
 <?php include_once('footer.php'); ?>
 
-</html>
 </body>
 
 </html>

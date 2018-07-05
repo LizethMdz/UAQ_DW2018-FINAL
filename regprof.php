@@ -114,7 +114,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
               <?php
                     $sql_consulta="SELECT * FROM MUNICIPIO ORDER BY nombre_municipio ASC";
                     $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                    echo '<select name="municipio">';
+                    echo '<select name="municipio" class="selects">';
                     while ($valores = mysqli_fetch_array($sql_datos)) {
                     echo '<option value="'.$valores[id_municipio].'">'.$valores[nombre_municipio].'</option>';
                     }

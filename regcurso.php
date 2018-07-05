@@ -76,7 +76,7 @@ if (empty($errores)) {
                  <?php
                   $sql_consulta="SELECT * FROM CONVOCATORIA ORDER BY nombre_convocatoria ASC";
                   $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                  echo '<select name="convocatoria">';
+                  echo '<select name="convocatoria" class="selects"> "';
                   while ($valores = mysqli_fetch_array($sql_datos)) {
                       echo '<option value="'.$valores[id_convocatoria].'">'.$valores[nombre_convocatoria].'</option>';
                   }
@@ -87,19 +87,19 @@ if (empty($errores)) {
                  <?php
                   $sql_consulta="SELECT * FROM SEDE ORDER BY nombre_sede ASC";
                   $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                  echo '<select name="sede">';
+                  echo '<select name="sede" class="selects">';
                   while ($valores = mysqli_fetch_array($sql_datos)) {
                       echo '<option value="'.$valores[id_sede].'">'.$valores[nombre_sede].'</option>';
                   }
                   echo '</select>';
                   ?>
 
-
+                  <br>
                  <p class="parr-title">Instructor</p>
                  <?php
                   $sql_consulta="SELECT * FROM INSTRUCTOR ORDER BY nombre_instructor ASC";
                   $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                  echo '<select name="instructor">';
+                  echo '<select name="instructor" class="selects">';
                   while ($valores = mysqli_fetch_array($sql_datos)) {
                       echo '<option value="'.$valores[id_instructor].'">'.$valores[nombre_instructor].'</option>';
                   }

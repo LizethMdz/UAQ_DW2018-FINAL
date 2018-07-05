@@ -69,6 +69,9 @@
         </ul>
       </li>
       <li>
+          <a href="revdoc.php"><i class="fas fa-file-image izq"></i>Documentos</a></li>
+      <li>
+      <li>
         <a href="logout.php"><i class="fas fa-sign-out-alt izq"></i>Salir</a></li>
       <li>
 

@@ -63,25 +63,27 @@ require('connectmysql.php');
 	   <h2>Selecciona tu curso</h2>
 	   <!--<input type="text" name="des" value="Inscribite a nuestras convocatorias">-->
           </div>
-	<div class="contenido-all">
-                    <div class="espacio_contenido">
-                    <h3 class="titulos">REGISTRO</h3>
+          <div class="contenido-all">
+            <form method="POST" action="inscripcion.php">
+                            <div class="espacio_contenido">
+                            <h3 class="titulos">REGISTRO</h3>
 
-                    <label for="" class="parr-title">Curso</label>
-                    <?php
-                    $sql_consulta="SELECT DISTINCT * from rl_curso JOIN convocatoria,sede WHERE rl_curso.sede_curso=sede.id_sede AND rl_curso.convocatoria=convocatoria.id_convocatoria";
-                    $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                    echo '<select name="curso">';
-                    while ($valores = mysqli_fetch_array($sql_datos)) {
-                        echo '<option value="'.$valores[id_curso].'">'.$valores[nombre_convocatoria].','.$valores[nombre_sede].','.$valores[dia_y_hora_curso].','.'</option>';
-                    }
-                    echo '</select>';
-                    ?>
+                            <label for="" class="parr-title">Curso</label>
+                            <?php
+                            $sql_consulta="SELECT DISTINCT * from rl_curso JOIN convocatoria,sede WHERE rl_curso.sede_curso=sede.id_sede AND rl_curso.convocatoria=convocatoria.id_convocatoria";
+                            $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
+                            echo '<select name="curso" class="selects">';
+                            while ($valores = mysqli_fetch_array($sql_datos)) {
+                                echo '<option value="'.$valores[id_curso].'">'.$valores[nombre_convocatoria].','.$valores[nombre_sede].','.$valores[dia_y_hora_curso].','.'</option>';
+                            }
+                            echo '</select>';
+                            ?>
 
 
-                    <input type="submit" value="Guardar" class="btn-enviar-form">
+                            <input type="submit" value="Aceptar" class="btn-enviar-form" name="guardar">
 
-                    </div>
+                            </div>
+              </form>
           </div>
 </div>
 <?php
