@@ -84,7 +84,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
            <div class="espacio_contenido">
 
               <h3 class="titulos">REGISTRO</h3>
-              <br><br>
+              <br><p><i>Nota! Es necesario asignar la convocatoria a un profesor y despues publicarla</i></p><br>
               <label for="nombre_convocatoria" class="parr-title">Nombre de la convocatoria: </label>
               <input class="inputs-profe" type="text" name="nombre_convocatoria" maxlength="30" required
               value="<?php /*if (isset($_POST['nombre_convocatoria'])) echo $_POST['nombre_convocatoria'];*/ ?>">
