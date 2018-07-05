@@ -12,7 +12,6 @@
 
 						 <form class="" action="login.php" method="post">
 
-
 										<div class="ingreso">
 											<p> Correo o Usuario </p>
 											<input type =  "email" name="email" maxlength="30" required placeholder="correo@dominio.com">

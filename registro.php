@@ -44,7 +44,7 @@
 									</div>
 
 									<div id = "envio">
-										<input type="submit" name="registro" value="Registrarme!">
+										<input type="submit" name="registro"  value="Registrarme!">
 									</div>
 
 							</div>
