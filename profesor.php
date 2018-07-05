@@ -10,6 +10,10 @@
       </li>
 
       <li>
+        <a href="perfilProf.php"><i class="izq far fa-user-circle izq"></i>Editar Perfil Profesor</a>
+      </li>
+
+      <li>
         <a href="#"><i class="izq far fa-newspaper izq"></i>Convocatoria<i class="fas fa-chevron-down der"></i></a>
         <ul>
           <li>

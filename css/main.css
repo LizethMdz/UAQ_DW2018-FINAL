@@ -256,6 +256,7 @@
 	border: 1px solid #E1E1E1;
 	position: relative;
 	width: 100%;
+  overflow: auto;
 	height:500px;;
 	background: white;
 
@@ -588,4 +589,55 @@ span{
         font-size: 13px;
 
 
+      }
+
+/*EDITAR DATOS PROFESOR Y ALUMNOS*/
+
+      .input-grp{
+      	padding: 10px;
+      	margin-left:25px;
+      	width: 245px;
+      	border: 1px solid #3458C1;
+      	border-radius: 2px;
+      	border-collapse: collapse;
+      }
+
+      .select-st{
+      	padding: 10px;
+      	margin-left:25px;
+      	color: #9b9b9b;
+      	width: 270px;
+      	border: 1px solid #3458C1;
+      	border-radius: 2px;
+        display: inline-block;
+      	border-collapse: collapse;
+      }
+
+      .contenedor-tabla.add-user{
+      	width: 90%;
+      	height: 400px;
+      }
+
+      /*AGREGAR USUARIO*/
+      .add-user{
+      	border-radius: 2px;
+      	border:1px solid #DADADA;
+      	background: white;
+      }
+
+      .form-add-user{
+      	width: 60%;
+        bottom:10px;
+      	height: 520px;
+
+      	position: absolute;
+      	top:10%;
+      	background: #F9F9F9;
+      	margin-left:20%;
+      	border-radius: 2px;
+      	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .size{
+      	width: 500px;
       }

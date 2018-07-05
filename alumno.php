@@ -8,7 +8,9 @@
       <li>
         <a href="inicio.php"><i class="izq fas fa-home izq"></i>Inicio</a>
       </li>
-
+      <li>
+        <a href="perfilAlumno.php"><i class="izq far fa-user-circle izq"></i>Editar Perfil Alumno</a>
+      </li>
       <li>
         <a href="#"><i class="izq fas fa-newspaper izq"></i>Convocatoria<i class="fas fa-chevron-down der"></i></a>
         <ul>
