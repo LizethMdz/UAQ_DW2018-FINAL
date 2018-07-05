@@ -64,7 +64,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $query="INSERT INTO instructor (id_instructor,folio,nombre_instructor,telefono_instructor,celular_instructor, email_instructor,   direccion_instructor, municipio)
         VALUES ('Null','$folio','$nombre_instructor','$telefono_instructor','$celular_instructor', '$email_instructor', '$direccion_instructor', '$municipio' )";
     //ejecutar la consulta
-    $resultado=@mysqli_query($dbcon,$sql);
+    $resultado=@mysqli_query($dbcon,$query);
     //Si la consulta tuvo éxito, entonces imprimir un mensaje
         if($resultado){
 

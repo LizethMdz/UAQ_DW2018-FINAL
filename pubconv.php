@@ -63,10 +63,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
           </div>
 	<div class="contenido-all">
                     <div class="espacio_contenido">
+                      <form action="pubconv.php" method="POST">
                               <h3 class="titulos">REGISTRO</h3>
                              <br>
                              <label class="parr-title">Convocatoria: </label>
                              <?php
+                              $sql_consulta="SELECT CONVOCATORIA.id_convocatoria, convocatoria.nombre_convocatoria FROM CONVOCATORIA join RL_CURSO where id_convocatoria=convocatoria ORDER BY nombre_convocatoria ASC";
+                              $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
+                              echo '<select name="convocatoria">';
+                              while ($valores = mysqli_fetch_array($sql_datos)) {
+                                  echo '<option value="'.$valores[id_convocatoria].'">'.$valores[nombre_convocatoria].'</option>';
+                              }
+                              echo '</select>';
+                              ?>
+                             <!--<?php
                               $sql_consulta="SELECT c.id_convocatoria, c.nombre_convocatoria FROM CONVOCATORIA c, convocatoria_publicada a where c.id_convocatoria=a.convocatoria ORDER BY nombre_convocatoria ASC";
                               $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
                               echo '<select name="convocatoria" class="selects">';
@@ -74,7 +84,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                                   echo '<option value="'.$valores[id_convocatoria].'">'.$valores[nombre_convocatoria].'</option>';
                               }
                               echo '</select>';
-                              ?>
+                              ?>-->
                               <br><br>
                              <label class="parr-title">Fecha de inicio de inscripciones: </label>
                              <input class="inputs-profe" type="date" name="f_inicio_inscripciones" maxlength="25" required min="2017-01-01" max="2020-12-31">
@@ -90,7 +100,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                              </select>
                              <br>
                              <br>
-                             <input type="submit" value="Guardar" class="btn-enviar-form">
+                             <input type="submit" value="Guardar" class="btn-enviar-form" name="guardar">
+                           </form>
                    </div>
           </div>
 </div>

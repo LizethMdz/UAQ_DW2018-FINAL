@@ -15,24 +15,91 @@
     include("menu_principal.php");
   }
 
-  if(!isset($_SESSION["user"])) {
+  /*if(!isset($_SESSION["user"])) {
   header("location:login.php");
-  } else {
+} else {*/
 
 ?>
+
+<!--SCRIPT-->
+<script>
+						function buscarJson(){
+							//Capturar lo que el usuario Escribio en la busqueda
+							Iconvo = document.getElementById('buscar');
+							busAjax = new XMLHttpRequest();
+							busAjax.open('GET', 'buscarAjaxJson.php?bus='+Iconvo.value);
+							busAjax.send();
+							busAjax.onreadystatechange = function(){
+								if (busAjax.readyState == 4 && busAjax.status == 200) {
+									console.log(Iconvo.value);
+									document.querySelector("#resCon").innerHTML = busAjax.responseText;
+									//Imprimir resultados
+									 miJSON = JSON.parse(busAjax.responseText);
+                   if(miJSON.length > 0){
+                     document.querySelector('#resCon').innerHTML =
+                      "<td>"+ miJSON[0].id_convocatoria +"</td>"+
+                      "<td>"+ miJSON[0].nombre_convocatoria +"</td>"+
+                      "<td>"+ miJSON[0].f_inicio +"</td>"+
+                      "<td>"+ miJSON[0].f_fin +"</td>"+
+                      "<td>"+ miJSON[0].costo_convocatoria +"</td>"+
+                      "<td>"+ miJSON[0].contenido_convocatoria +"</td>"+
+                      "<td style='background:green; color:white;'>"+ miJSON[0].estado_convocatoria +"</td>";
+                   }else{
+                     document.querySelector('#resCon').innerHTML =
+                     "<td colspan='7' style='font-syle:italic; color:gray;'>"+ "!!!!!!!!!!!!!!!!!!SIN RESULTADOS !!!!!!!!!!!!!!!!!!" +"</td>";
+                   }
+
+								}
+							}
+						}
+
+
+				</script>
+
+
 
 <!--CONTENIDO DE TODO-->
 <div class = "descripcion">
           <div id="des">
 	   <h2>Ver Convocatorias</h2>
-	   <!--<input type="text" name="des" value="Inscribite a nuestras convocatorias">-->
           </div>
         	<div class="contenido-all">
 
                             <div class="espacio_contenido">
+                                <h3 class="titulos">BUSCAR CONVOCATORIAS</h3>
+                                <br><br>
+                                <label for="buscar" class="parr-title">Buscar</label>
+                                <input type="text" clase="inputs-profe" name="buscar" id="buscar" placeholder="Introduce el Curso a Buscar"
+                                style="width:300px; padding:5px;" onkeyup="buscarJson();">
+                                <br><br>
+                                <div class="tabla-contenedor-2">
+                                  <table class="tabla-general" id="tabla-ajax">
+                                    <thead>
+
+                                        <tr>
+                                          <th style="background:#006BAA; color:white;">ID </th>
+                                          <th style="background:#006BAA; color:white;">Nombre</th>
+                                          <th style="background:#006BAA; color:white;">Fecha de Inicio</th>
+                                          <th style="background:#006BAA; color:white;">Fecha de Fin</th>
+                                          <th style="background:#006BAA; color:white;">Costo</th>
+                                          <th style="background:#006BAA; color:white;">Contenido</th>
+                                          <th style="background:#006BAA; color:white;">Estado</th>
+
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr id="resCon">
+
+                                        </tr>
+
+                                      </tbody>
+                                      </table>
+                              </div>
+                              <!--<div class='resCon' id="resCon"></div>-->
+                                <br><br>
                                 <h3 class="titulos">CONVOCATORIAS CREADAS</h3>
                                 <div class="tabla-contenedor-2">
-                                        <table class="tabla-general">
+                                  <table class="tabla-general">
                                     <thead>
 
                                         <tr>
@@ -57,7 +124,7 @@
                                                echo $row['f_inicio'];
                                                echo "</td><td>";
                                                echo $row['f_fin'];
-                                               echo "</td><td>$";
+                                               echo "</td><td>";
                                                echo $row['costo_convocatoria'];
                                                echo "</td><td>";
                                                echo $row['contenido_convocatoria'];
@@ -80,35 +147,9 @@
 
 </div>
 
-<div class="tabla">
-	<h1 class="pal">Convocatorias Creadas</h1>
-	<button type="button" class="btn1">Regresar</button><br>
-
-	<input type="search" name="buscar" placeholder="Buscar por el nombre del producto"  id="busca">
-
-<table class="tl">
-<tr class="t">
-	<td>Nombre</td>
-	<td>Fecha de Inicio</td>
-	<td>Fecha de Fin</td>
-	<td>Costo</td>
-	<td>Contenido</td>
-	<td>Estado</td>
-</tr>
-
-<tr>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-	<td> </td>
-</tr>
-</table>
-</div>
 
 <?php
-}
+/*}*/
 ?>
 
 <?php include_once('footer.php'); ?>
