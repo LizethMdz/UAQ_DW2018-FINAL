@@ -34,6 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
      $id = trim($_POST['id']);
 
+
      $asistencia = trim($_POST['asistencia']);
 
      $c = trim($_POST['curso']);
@@ -46,12 +47,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     //ejecutar la consulta
     $resultado=@mysqli_query($dbcon,$query);
     //Si la consulta tuvo éxito, entonces imprimir un mensaje
-    if($resultado){
-        echo '<script>alert("Gracias por el registro")</script>';
-    }
-    else{
-        echo '<script>alert("Hubo errores en la consulta")</script>';
-    }
+        if($resultado){
+            echo '<script>alert("Gracias por el registro")</script>';
+        }
+        else{
+            die();
+            echo '<script>alert("Hubo errores en la consulta")</script>';
+          }
     }
     else{
         echo '<script>alert("El servidor esta en mantenimiento, intenta mas tarde")</script>';
@@ -85,7 +87,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
               		<p class="parr-title"> Nombre alumno: </p>
               		<input type="text" class="inputs-profe" id="alumno" name="alumno" value="<?php if(isset($_GET['p'])) echo $_GET['p'];?>">
                    <br><br>
-        			<input type="hidden" name="curso" id="curso" value="<?php echo $_POST['c'];?>">
+        			<input type="hidden" name="curso" id="curso" value="<?php echo $_GET['c'];?>">
 
                 <p class="parr-title"> Asistencia </p>
               		<select name="asistencia" class="selects">
