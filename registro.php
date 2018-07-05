@@ -1,5 +1,5 @@
 <?php
-    $page_title = 'Sedes';
+    $page_title = 'Registro';
     include ('header.php');
  session_start();
   if (@$_SESSION['id'] == 'Coordinador'){

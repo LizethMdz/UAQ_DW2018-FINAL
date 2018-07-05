@@ -17,7 +17,6 @@
 
 
 ?>
-
 				<div class = "descripcion">
 
 					<div id="des">
