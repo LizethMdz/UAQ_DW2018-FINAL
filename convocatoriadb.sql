@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2018 a las 06:24:37
+-- Tiempo de generación: 05-07-2018 a las 09:31:09
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -94,6 +94,13 @@ CREATE TABLE `asistencia` (
   `tipo_asistencia` enum('asistencia','falta','justificacion','retardo') DEFAULT NULL,
   `curso` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `asistencia`
+--
+
+INSERT INTO `asistencia` (`id_asistencia`, `fecha`, `alumno`, `tipo_asistencia`, `curso`) VALUES
+(1, '2018-07-03', 3, 'asistencia', 1);
 
 -- --------------------------------------------------------
 
@@ -251,6 +258,13 @@ CREATE TABLE `rl_inscripcion` (
   `evaluacion_curso` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `rl_inscripcion`
+--
+
+INSERT INTO `rl_inscripcion` (`alumno`, `rl_curso`, `calificacion_alumno`, `total_asistencias`, `evaluacion_curso`) VALUES
+(3, 1, 9, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -399,7 +413,7 @@ ALTER TABLE `alumno`
 -- AUTO_INCREMENT de la tabla `asistencia`
 --
 ALTER TABLE `asistencia`
-  MODIFY `id_asistencia` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_asistencia` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `convocatoria`
