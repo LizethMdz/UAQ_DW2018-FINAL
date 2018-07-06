@@ -52,6 +52,7 @@
 
           <div class="espacio_contenido">
             <h3 class="titulos">REGISTRO</h3>
+            <br><p><i>Introduce una institucion</i></p><br>
             <label class="parr-title" for="int_name">Institucion</label>
             <input type="text" class="inputs-profe" name="inst" id="int_name" maxlength="30" reuired autofocus pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Sólo letras" >
 

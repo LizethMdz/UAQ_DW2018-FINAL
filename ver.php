@@ -67,7 +67,7 @@
 
                             <div class="espacio_contenido">
                                 <h3 class="titulos">BUSCAR CONVOCATORIAS</h3>
-                                <br><br>
+                                  <br><p><i>Busca por nombre</i></p><br>
                                 <label for="buscar" class="parr-title">Buscar</label>
                                 <input type="text" clase="inputs-profe" name="buscar" id="buscar" placeholder="Introduce el Curso a Buscar"
                                 style="width:300px; padding:5px;" onkeyup="buscarJson();">
@@ -97,7 +97,7 @@
                               </div>
                               <!--<div class='resCon' id="resCon"></div>-->
                                 <br><br>
-                                <h3 class="titulos">CONVOCATORIAS CREADAS</h3>
+                                <!--<h3 class="titulos">CONVOCATORIAS CREADAS</h3>
                                 <div class="tabla-contenedor-2">
                                   <table class="tabla-general">
                                     <thead>
@@ -139,7 +139,7 @@
                                       </tbody>
                                    </table>
 
-                                </div>
+                                </div>-->
 
                             </div>
 

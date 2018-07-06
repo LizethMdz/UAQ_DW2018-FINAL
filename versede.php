@@ -38,10 +38,10 @@
                                         <thead>
 
                                         <tr>
-                                          <th style="background:#006BAA; color:white;">Sede</th>
-                                          <th style="background:#006BAA; color:white;">Municipio</th>
-                                          <th style="background:#006BAA; color:white;">Institucion</th>
-                                          <th style="background:#006BAA; color:white;">Capacidad</th>
+                                          <th style="background:#30ACAC; color:white;">Sede</th>
+                                          <th style="background:#30ACAC; color:white;">Municipio</th>
+                                          <th style="background:#30ACAC; color:white;">Institucion</th>
+                                          <th style="background:#30ACAC; color:white;">Capacidad</th>
 
                                         </tr>
                                       </thead>
@@ -51,7 +51,7 @@
                                                     $sqldata= mysqli_query($dbcon,"SELECT * from sede,municipio,institucion where sede.municipio=municipio.id_municipio AND sede.institucion=institucion.id_institucion");
 
                                                     while($row=mysqli_fetch_array($sqldata,MYSQLI_ASSOC)){
-                                                      echo "<tr><td>";
+                                                      echo "<tr><td style='padding: 15px;'>";
                                                       echo $row['nombre_sede'];
                                                       echo "</td><td>";
                                                       echo $row['nombre_municipio'];

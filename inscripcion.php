@@ -67,7 +67,7 @@ require('connectmysql.php');
             <form method="POST" action="inscripcion.php">
                             <div class="espacio_contenido">
                             <h3 class="titulos">REGISTRO</h3>
-
+                            <br><p><i>Selecciona un curso para inscribirte!!</i></p><br>
                             <label for="" class="parr-title">Curso</label>
                             <?php
                             $sql_consulta="SELECT DISTINCT * from rl_curso JOIN convocatoria,sede WHERE rl_curso.sede_curso=sede.id_sede AND rl_curso.convocatoria=convocatoria.id_convocatoria";

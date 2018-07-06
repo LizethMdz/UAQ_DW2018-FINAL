@@ -50,6 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
                <div class="espacio_contenido">
                  <h3 class="titulos">REGISTRO</h3>
+                 <br><p><i>Introduce un municipio</i></p><br>
                  <label for="mun_nombre" class="parr-title">Municipio</label>
                  <input type="text" class="inputs-profe" name="mun" id="mun_nombre"maxlength="30" required autofocus pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" title="Sólo letras">
 

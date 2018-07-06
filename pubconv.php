@@ -65,12 +65,12 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     <div class="espacio_contenido">
                       <form action="pubconv.php" method="POST">
                               <h3 class="titulos">REGISTRO</h3>
-                             <br>
+                               <br><p><i>Nota! Necesita ser asignada primero a un profesor para que aparesca la Convocatoria</i></p><br>
                              <label class="parr-title">Convocatoria: </label>
                              <?php
                               $sql_consulta="SELECT CONVOCATORIA.id_convocatoria, convocatoria.nombre_convocatoria FROM CONVOCATORIA join RL_CURSO where id_convocatoria=convocatoria ORDER BY nombre_convocatoria ASC";
                               $sql_datos=mysqli_query($dbcon,$sql_consulta) or die('Error');
-                              echo '<select name="convocatoria">';
+                              echo '<select name="convocatoria" class="selects">';
                               while ($valores = mysqli_fetch_array($sql_datos)) {
                                   echo '<option value="'.$valores[id_convocatoria].'">'.$valores[nombre_convocatoria].'</option>';
                               }

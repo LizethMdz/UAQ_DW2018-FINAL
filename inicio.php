@@ -28,6 +28,8 @@
 						<h3>¡Registrarte!</h3><br>
 						<p>Solo tienes que llenar el formulario con tus datos para poder registrarte como alumno! Despues de eso podrás checar las convocatorias disponibles y podras inscribirte al curso que más te interese!</p><br>
 						<h3>¡Te deseamos mucha suerte en tu nueva aventura del conocimiento!</h3>
+            <br><br>
+            <img src="img/libros.jpg" alt="libros" class="img-main" height="200px">
 					</div>
 
 				</div><!--descripcion-->

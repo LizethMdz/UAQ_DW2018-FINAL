@@ -41,10 +41,10 @@ $errores=array();
                 <thead>
 
                 <tr>
-                  <th style="background:#006BAA; color:white;">ID </th>
-                  <th style="background:#006BAA; color:white;">CURP</th>
-                  <th style="background:#006BAA; color:white;">Resivo de Pago</th>
-                  <th style="background:#006BAA; color:white;">Cedula de Inscripcion</th>
+                  <th style="background:#30ACAC; color:white;">ID </th>
+                  <th style="background:#30ACAC; color:white;">CURP</th>
+                  <th style="background:#30ACAC; color:white;">Resivo de Pago</th>
+                  <th style="background:#30ACAC; color:white;">Cedula de Inscripcion</th>
 
                 </tr>
               </thead>

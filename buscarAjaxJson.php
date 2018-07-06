@@ -9,7 +9,7 @@ $convoca = $_GET['bus'];
 include('connectmysql.php');
  $resultado = mysqli_query($dbcon,"SELECT * from convocatoria,convocatoria_publicada
    where convocatoria.id_convocatoria=convocatoria_publicada.convocatoria and convocatoria_publicada.estado_convocatoria='Abierta'
-   and convocatoria.nombre_convocatoria LIKE '%$convoca%'" );
+    AND convocatoria.nombre_convocatoria LIKE '%$convoca%'" );
 
 $convocatorias = array();
 while ($convocatoria = $resultado->fetch_object()) {

@@ -109,7 +109,7 @@ include('connectmysql.php');
                  <br>
                <button style="padding: 10px;
                margin-left: 25px; margin-top: 25px; background: #3458C1; color:#fff;" name="edit_account" type="submit" value="Editar">
-                 Agregar
+                 Editar
                </button>
              </form>
          </div>
