@@ -93,7 +93,7 @@
 
 
 										<div class="ingreso">
-											<p> Correo o Usuario </p>
+											<p> Correo </p>
 											<input type =  "email" name="email" maxlength="30" required placeholder="correo@dominio.com">
 											<p> Contraseña</p>
 											<input type =  "password" name="password" maxlength="10" required>
