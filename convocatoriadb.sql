@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2018 a las 09:31:09
+-- Tiempo de generación: 07-07-2018 a las 05:53:50
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -47,8 +47,10 @@ CREATE TABLE `alumno` (
 --
 
 INSERT INTO `alumno` (`id_alumno`, `folio`, `nombre_Alumno`, `apaterno_alumno`, `amaterno_alumno`, `nacimiento_alumno`, `ocupacion_alumno`, `celular_alumno`, `email_alumno`, `callenumero_alumno`, `municipio`) VALUES
-(2, 'ALUM111liz', 'liz', 'mdz', 'trj', '2018-07-01', 'estudiante', 111222333, 'liz@mail.com', 'calle federalismo colonia venceremos', 2),
-(3, 'ALUM777lui', 'luis', 'jkl', 'jkljlkj', '2018-07-06', 'estudiante', 777669977, 'luis@mail.com', 'calle democracia 56 colonia venceremos', 1);
+(2, 'ALUM111liz', 'Lizeth Ailet', 'Mendoza', 'Trejo', '2018-07-01', 'estudiante', 2147483647, 'liz@mail.com', 'Calle Democracia 56, Colonia Venceremos', 2),
+(3, 'ALUM777lui', 'Luis Alberto', 'Garcia', 'Vega', '2018-07-06', 'estudiante', 2147483647, 'luis@mail.com', 'Reforma', 1),
+(6, 'ALUM442lup', 'lupita', 'juan', 'juan', '2018-07-18', 'Alumno', 2147483647, 'lupi@mail.com', 'calle 129 colonia Venceremos', 1),
+(7, 'ALUM442Ana', 'Laura', 'PeÃ±a', 'Vega', '1997-03-28', 'estudiante', 2147483647, 'lau@mail.com', 'Campanas', 1);
 
 --
 -- Disparadores `alumno`
@@ -79,7 +81,8 @@ CREATE TABLE `archivos` (
 --
 
 INSERT INTO `archivos` (`alumno`, `CURP`, `recibo_pago`, `cedula_inscripcion`) VALUES
-(3, 'documentos/conn.PNG', 'documentos/alum.PNG', 'documentos/codigo.PNG');
+(3, 'documentos/conn.PNG', 'documentos/alum.PNG', 'documentos/codigo.PNG'),
+(7, 'documentos/pago.jpg', 'documentos/Inscripcion.png', 'documentos/Inscripcion.png');
 
 -- --------------------------------------------------------
 
@@ -100,7 +103,10 @@ CREATE TABLE `asistencia` (
 --
 
 INSERT INTO `asistencia` (`id_asistencia`, `fecha`, `alumno`, `tipo_asistencia`, `curso`) VALUES
-(1, '2018-07-03', 3, 'asistencia', 1);
+(1, '2018-07-03', 3, 'asistencia', 1),
+(6, '2018-07-06', 3, 'falta', 1),
+(7, '2018-07-06', 2, 'asistencia', 2),
+(8, '2018-07-08', 3, 'falta', 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +129,12 @@ CREATE TABLE `convocatoria` (
 
 INSERT INTO `convocatoria` (`id_convocatoria`, `nombre_convocatoria`, `f_inicio`, `f_fin`, `costo_convocatoria`, `contenido_convocatoria`) VALUES
 (1, 'Curso de ingles', '2018-07-16', '2018-08-16', 850, 'Aprenderas todo'),
-(2, 'Curso de Mantenimiento', '2018-07-02', '2018-07-28', 700, 'Contiene todo lo necesario');
+(2, 'Curso de Mantenimiento', '2018-07-02', '2018-07-28', 700, 'Contiene todo lo necesario'),
+(3, 'Examen de Talentos', '2018-07-16', '2018-07-18', 250, 'Demuestra tu talento'),
+(4, 'Android', '2018-07-08', '2018-07-31', 750, 'Abarcara temas basicos para aprendizaje'),
+(5, 'Programacion en Shell', '2018-07-08', '2018-07-31', 780, 'Temas basicos en shell y linux'),
+(6, 'Java', '2018-07-08', '2018-07-31', 850, 'Abarcara solo temas basicos'),
+(7, 'DiseÃ±o Web', '2018-07-09', '2018-07-31', 750, 'Abarcara temas basicos');
 
 -- --------------------------------------------------------
 
@@ -144,7 +155,9 @@ CREATE TABLE `convocatoria_publicada` (
 
 INSERT INTO `convocatoria_publicada` (`convocatoria`, `f_inicio`, `f_fin`, `estado_convocatoria`) VALUES
 (1, '2018-07-16', '2018-08-16', 'Abierta'),
-(2, '2018-07-02', '2018-07-28', 'Abierta');
+(2, '2018-07-02', '2018-07-28', 'Abierta'),
+(3, '2018-07-05', '2018-07-09', 'Abierta'),
+(5, '2018-07-06', '2018-07-13', 'Abierta');
 
 -- --------------------------------------------------------
 
@@ -164,7 +177,9 @@ CREATE TABLE `institucion` (
 INSERT INTO `institucion` (`id_institucion`, `nombre_institucion`) VALUES
 (1, 'FRAY DE LEON'),
 (2, 'UAQ'),
-(3, 'Tecnologico de QuerÃ©taro');
+(3, 'Tecnologico de QuerÃ©taro'),
+(4, 'UTEQ'),
+(5, 'UPQ');
 
 -- --------------------------------------------------------
 
@@ -188,8 +203,11 @@ CREATE TABLE `instructor` (
 --
 
 INSERT INTO `instructor` (`id_instructor`, `folio`, `nombre_instructor`, `telefono_instructor`, `celular_instructor`, `email_instructor`, `direccion_instructor`, `municipio`) VALUES
-(13, 'INST132Jua', 'Juan', '1321321', '5456465465', 'juan@mail.com', 'dsdsdsa', 2),
-(14, 'INST787mar', 'maria', '7878987', '4654654654', 'ma@mail.com', 'reforma 878, pueblito', 2);
+(13, 'INST132Jua', 'Juan Felipe', '1321321', '23335567', 'juan@mail.com', 'Campanas', 2),
+(14, 'INST787mar', 'maria', '7878987', '4654654654', 'ma@mail.com', 'reforma 878, pueblito', 2),
+(15, 'INST666Noe', 'Noe', '6661112', '5566698877', 'noe@gmail.com', 'Lazaro Cardenas 578, Azteca', 1),
+(16, 'INST589Osc', 'Oscar', '5896312', '4427894512', 'oscar@mail.com', 'Lomas Vedes 567, Alamos', 1),
+(17, 'INST678Eri', 'Erick', '6781245', '4429104569', 'erick@mail.com', 'Lazaro Caedenas 234, Azteca', 1);
 
 --
 -- Disparadores `instructor`
@@ -219,7 +237,9 @@ CREATE TABLE `municipio` (
 
 INSERT INTO `municipio` (`id_municipio`, `nombre_municipio`) VALUES
 (1, 'Queretaro'),
-(2, 'Corregidora');
+(2, 'Corregidora'),
+(3, 'San Juan del Rio'),
+(4, 'Colon');
 
 -- --------------------------------------------------------
 
@@ -242,7 +262,12 @@ CREATE TABLE `rl_curso` (
 
 INSERT INTO `rl_curso` (`id_curso`, `sede_curso`, `dia_y_hora_curso`, `convocatoria`, `instructor`, `promedio_evaluacion_curso`) VALUES
 (1, 2, '17 de enero a las 9:00am', 1, 13, 10),
-(2, 2, '9:00am - 12:00pm', 2, 14, 0);
+(2, 2, '9:00am - 12:00pm', 2, 14, 0),
+(3, 2, '9:00am - 13:00pm', 3, 15, 0),
+(4, 2, '11:30am - 13:00pm', 4, 15, 0),
+(5, 2, '11:30am - 13:00pm', 5, 15, 0),
+(6, 2, '9:00am - 12:00pm', 6, 16, 0),
+(7, 5, '9:00am - 12:00pm', 7, 13, 0);
 
 -- --------------------------------------------------------
 
@@ -263,7 +288,9 @@ CREATE TABLE `rl_inscripcion` (
 --
 
 INSERT INTO `rl_inscripcion` (`alumno`, `rl_curso`, `calificacion_alumno`, `total_asistencias`, `evaluacion_curso`) VALUES
-(3, 1, 9, 0, 0);
+(2, 2, 10, 0, 0),
+(3, 1, 6, 0, 0),
+(7, 1, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -286,7 +313,11 @@ CREATE TABLE `sede` (
 INSERT INTO `sede` (`id_sede`, `nombre_sede`, `institucion`, `municipio`, `capacidad`) VALUES
 (1, 'Queretaro', 1, 1, 20),
 (2, 'Facultad de Informatica', 2, 1, 10),
-(3, 'Campus Norte', 3, 1, 30);
+(3, 'Campus Norte', 3, 1, 30),
+(4, 'Sala de Conferencias', 2, 1, 50),
+(5, 'Auditorio', 3, 1, 200),
+(6, 'Sala 11', 4, 1, 100),
+(7, 'Sala 22', 4, 1, 50);
 
 -- --------------------------------------------------------
 
@@ -307,10 +338,17 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`email_usuario`, `password_usuario`, `tipo_usuario`) VALUES
 ('admin@mail.com', 'admin', 'Coordinador'),
 ('alumno@mail.com', '12345', 'Alumno'),
+('analau@mail.com', 'ALUM272Ana', 'Alumno'),
+('erick@mail.com', 'INST678Eri', 'Instructor'),
 ('juan@mail.com', 'INST132Jua', 'Instructor'),
+('lau@mail.com', 'ALUM442Ana', 'Alumno'),
 ('liz@mail.com', 'ALUM111liz', 'Alumno'),
+('lmt@mail.com', 'ALUM427Ana', 'Alumno'),
 ('luis@mail.com', 'ALUM777lui', 'Alumno'),
-('ma@mail.com', 'INST787mar', 'Instructor');
+('lupi@mail.com', 'ALUM442lup', 'Alumno'),
+('ma@mail.com', 'INST787mar', 'Instructor'),
+('noe@gmail.com', 'INST666Noe', 'Instructor'),
+('oscar@mail.com', 'INST589Osc', 'Instructor');
 
 --
 -- Índices para tablas volcadas
@@ -407,55 +445,55 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `id_alumno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_alumno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `asistencia`
 --
 ALTER TABLE `asistencia`
-  MODIFY `id_asistencia` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_asistencia` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `convocatoria`
 --
 ALTER TABLE `convocatoria`
-  MODIFY `id_convocatoria` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_convocatoria` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `convocatoria_publicada`
 --
 ALTER TABLE `convocatoria_publicada`
-  MODIFY `convocatoria` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `convocatoria` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `institucion`
 --
 ALTER TABLE `institucion`
-  MODIFY `id_institucion` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_institucion` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `instructor`
 --
 ALTER TABLE `instructor`
-  MODIFY `id_instructor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_instructor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `municipio`
 --
 ALTER TABLE `municipio`
-  MODIFY `id_municipio` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_municipio` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `rl_curso`
 --
 ALTER TABLE `rl_curso`
-  MODIFY `id_curso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_curso` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `sede`
 --
 ALTER TABLE `sede`
-  MODIFY `id_sede` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_sede` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
